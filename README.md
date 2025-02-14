@@ -18,12 +18,12 @@ php artisan install:api
 php artisan migrate
 
 API Routes
-<h3>Authentication</h3>
+Authentication
 
     POST → {url}/api/auth/register - Register a new user
     POST → {url}/api/auth/login - Login an existing user
 
-<h3>File Upload Routes</h3>
+File Upload Routes
 
     POST → {url}/api/upload - Upload a file (Params: file, caption)
     PUT → {url}/api/upload/{id} - Update a file (Params: file (optional), caption)
