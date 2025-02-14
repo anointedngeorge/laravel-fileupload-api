@@ -1,26 +1,37 @@
-Requirements
+# File Upload API with AWS S3
+
+## Requirements
+
+Run the following command to install the required package:
+
+```sh
 composer require league/flysystem-aws-s3-v3
 
-<h4>Setup Aws Bucket 3 credentials</h4>
->>> AWS_ACCESS_KEY_ID=
->>> AWS_SECRET_ACCESS_KEY=
->>> AWS_DEFAULT_REGION=us-east-1
->>> AWS_BUCKET=
->>> AWS_USE_PATH_STYLE_ENDPOINT=false
 
-<h4>Required Artisan Commands</h4>
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
 
-> > > php artisan install:api
-> > > php artisan migrate
+php artisan install:api
+php artisan migrate
 
-<h4>API ROUTES</h4>
+API Routes
+Authentication
 
-> > > <p>Authentication</p> <<<<
-> > > POST -> {url}/api/auth/register
-> > > POST -> {url}/api/auth/login
+    POST → {url}/api/auth/register - Register a new user
+    POST → {url}/api/auth/login - Login an existing user
 
-> > > <p>File Upload Url</p> <<<<
-> > > POST -> {url}/api/upload [Params: [file, caption] ]
-> > > PUT -> {url}/api/upload/$id [Params: [file(optional), caption] ]
-> > > GET -> {url}/api/upload Fetch all uploads
-> > > DELETE -> {url}/api/upload/$id
+File Upload Routes
+
+    POST → {url}/api/upload - Upload a file (Params: file, caption)
+    PUT → {url}/api/upload/{id} - Update a file (Params: file (optional), caption)
+    GET → {url}/api/upload - Fetch all uploaded files
+    DELETE → {url}/api/upload/{id} - Delete a file
+
+```
+
+```
+
+```
